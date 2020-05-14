@@ -8,8 +8,9 @@ const oprList = ["+", "-", "*", "/", "%", "."];
 const addNums = text => {
   let { value } = calcArea;
 
-  //Rules to add .
+  //Rules to add dot
   const ruleA = value.length === 0 && text === ".";
+
   //Add  only if both rules apply
   if (!ruleA) {
     calcArea.value += text;
@@ -35,7 +36,7 @@ const addOpr = text => {
 };
 
 //Delete inputs on backspace
-const delNums = () => {
+const del = () => {
   const { value } = calcArea;
   if (value.length > 0) {
     calcArea.value = value.substr(0, value.length - 1);
@@ -75,7 +76,7 @@ document.querySelectorAll(".button-group > span").forEach(e => {
       calc();
     } else if (classList.contains("delete")) {
       //Backspace button clicked
-      delNums();
+      del();
     } else if (classList.contains("clear")) {
       //Clear button clicked
       clear();
@@ -110,9 +111,11 @@ document.addEventListener("keydown", e => {
       calc();
       break;
     case "Backspace":
-      delNums();
+      del();
+      break;
     case "c":
       clear();
     default:
+      break;
   }
 });
