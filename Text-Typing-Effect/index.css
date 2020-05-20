@@ -1,0 +1,100 @@
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* Text area */
+textarea {
+  flex: 1 100%;
+  margin-bottom: 30px;
+  min-height: 9em;
+  font-size: 2em;
+  padding: 10px;
+  border: 1px solid #607d8b;
+  box-shadow: 0 0 3px;
+}
+
+/* Button and Speed Wrapper */
+.fields{
+    display: inline-flex;
+    justify-content: space-between;
+    flex: 1;
+    align-items: center;
+}
+
+/* Speed Selector wrapper */
+.fields-group{
+     display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+/* Speed selector */
+label{
+    text-align: center;
+    font-size: 2em;
+    margin-right: 20px;
+}
+
+select{
+    font-size: 1.8em;
+    cursor: pointer;
+    border: 1px solid #8BC34A;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    box-shadow: 0 0 3px;
+    color: #fff;
+}
+
+/* Button */
+#start-typing-btn {
+  font-size: 1.8em;
+  cursor: pointer;
+  border: 1px solid red;
+  padding: 10px 15px;
+  background-color: #f44336;
+  box-shadow: 0 0 3px;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+#start-typing-btn:hover {
+  color: #000;
+}
+
+/* Typing area */
+#type-area {
+  flex: 1 100%;
+  min-height: 3em;
+  font-size: 2em;
+  padding: 10px;
+  border: 1px solid #ff5722;
+  box-shadow: 0 0 3px;
+  margin-top: 25px;
+}
+
+/* Cursor */
+#cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.75em;
+  background: red;
+  position: relative;
+  top: 1px;
+  left: 6px;
+  animation: blink 1s ease infinite;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

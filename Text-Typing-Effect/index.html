@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text Typing Effect</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+  <main>
+    <!-- Receives Text -->
+    <textarea id="text"></textarea>
+
+    <!-- Speed Selector and Button -->
+    <div class="fields">
+      <div class="fields-group">
+        <label for="speed">Select Speed</label>
+        <select id="type-speed" name="speed">
+          <option value="100">100</option>
+          <option value="200">200</option>
+          <option value="300" selected>300</option>
+          <option value="400">400</option>
+          <option value="500">500</option>
+          <option value="600">600</option>
+          <option value="700">700</option>
+          <option value="800">800</option>
+          <option value="900">900</option>
+          <option value="1000">1000</option>
+        </select>
+      </div>
+      <span id="start-typing-btn">Type</span>
+    </div>
+
+    <!-- Area where text will typed -->
+    <div id="type-area"><span id="text-type"></span></span><span id="cursor"></span></div>
+  </main>
+  <script src="./index.js"></script>
+</body>
+
+</html>
