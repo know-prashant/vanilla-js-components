@@ -1,0 +1,48 @@
+body {
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+}
+
+#words-wrapper {
+  position: absolute;
+  -webkit-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+  -webkit-perspective: 500px;
+  perspective: 500px;
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  top: 50%;
+  margin-left: -250px;
+  margin-top: -250px;
+}
+
+.word {
+  position: absolute;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: translateZ(1500px);
+  transform: translateZ(1500px);
+  -webkit-transition: -webkit-transform 1.9s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 2.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 1.9s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 2.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.horizontal {
+  transform: translateZ(1500px) rotate(90deg);
+  -webkit-transform: translateZ(1500px) rotate(90deg);
+}
+
+.word.show {
+  opacity: 1;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.word.horizontal.show {
+  -webkit-transform: translateZ(0) rotate(90deg);
+  transform: translateZ(0) rotate(90deg);
+}
