@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 1000px;
+  margin: 60px auto;
+  flex-wrap: wrap;
+}
+
+.calc,
+.info {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 0 1 48%;
+  width: 48%;
+  padding: 25px;
+}
+
+.box {
+  box-shadow: 0 0 3px #000;
+}
+
+.field-group,
+.output {
+  display: inline-flex;
+  flex: 1 1 100%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.output {
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #eee;
+  min-height: 100px;
+  margin: 30px 0;
+  font-size: 2.2em;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 2em;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.btn {
+  font-size: 1.8em;
+  cursor: pointer;
+  border: 1px solid red;
+  padding: 10px 15px;
+  background-color: #f44336;
+  box-shadow: 0 0 3px;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.btn:hover {
+  color: #000;
+}
+
+.rows {
+  display: inline-flex;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+}
+
+.rows > span {
+  flex: 1 1 50%;
+  text-align: center;
+  font-size: 2em;
+}
