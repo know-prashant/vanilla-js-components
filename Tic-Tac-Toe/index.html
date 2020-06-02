@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main class="wrapper">
+      <!-- Choose Option -->
+      <section class="option-selection-area">
+          <h1>Choose Your Option</h1>
+        <div class="field-group">
+          <input type="radio" name="player-option" value="1" checked/>
+          <label for="player-option">X</label>
+        </div>
+        <div class="field-group">
+          <input type="radio" name="player-option" value="-1" />
+          <label for="player-option">O</label>
+        </div>
+      </section>
+
+      <!-- Board -->
+      <section class="game-area">
+        <div class="row" data-column="0" data-row="0">
+          <div><span></span></div>
+        </div>
+        <div class="row" data-column="1" data-row="0">
+          <div><span></span></div>
+        </div>
+        <div class="row" data-column="2" data-row="0">
+          <div><span></span></div>
+        </div>
+        <div class="row" data-column="0" data-row="1">
+          <div><span></span></div>
+        </div>
+        <div class="row" data-column="1" data-row="1">
+          <div><span></span></div>
+        </div>
+        <div class="row" data-column="2" data-row="1">
+          <div><span></span></div>
+        </div>
+        <div class="row" data-column="0" data-row="2">
+          <div><span></span></div>
+        </div>
+        <div class="row" data-column="1" data-row="2">
+          <div><span></span></div>
+        </div>
+        <div class="row" data-column="2" data-row="2">
+          <div><span><span></span></div>
+        </div>
+      </section>
+      
+      <!-- Result dashboard -->
+      <section class="result"></section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
