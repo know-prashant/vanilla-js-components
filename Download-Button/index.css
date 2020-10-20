@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  background: red;
+  border-radius: 40px;
+  transition: all 1s cubic-bezier(0.17, 0.52, 0.83, 0.67) 0.35s;
+}
+
+.move .loader {
+  top: 0;
+  border-radius: 0;
+}
+
+.icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: transparent;
+  top: 0;
+  left: 0;
+}
+
+.icon > span {
+  position: absolute;
+  width: 4px;
+  background: green;
+  transform: translate(-50%, -50%);
+}
+
+.icon > span:nth-child(2) {
+  height: 25px;
+  top: 50%;
+  left: 50%;
+  transition: top 0.3s ease;
+}
+
+.icon > span:nth-child(1) {
+  height: 17px;
+  top: 57%;
+  left: 45%;
+  transform: translate(-50%, -50%) rotateZ(-45deg);
+}
+
+.icon > span:nth-child(3) {
+  height: 17px;
+  top: 57%;
+  left: 55%;
+  transform: translate(-50%, -50%) rotateZ(45deg);
+}
+
+@keyframes pumpLeft {
+  40% {
+    transform: translate(-50%, -50%) rotateZ(105deg);
+  }
+  85% {
+    transform: translate(-50%, -50%) rotateZ(90deg);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pumpRight {
+  40% {
+    transform: translate(-50%, -50%) rotateZ(-105deg);
+  }
+  85% {
+    transform: translate(-50%, -50%) rotateZ(-90deg);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pullDown {
+  22% {
+    top: 13%;
+  }
+  100% {
+    top: 165%;
+  }
+}
+
+/* cubic-bezier(0.17, 0.49, 0.53, 0.8) */
+.move .icon > span:nth-child(2) {
+  animation: pullDown 1.8s cubic-bezier(0.17, 0.52, 0.83, 0.67);
+}
+
+.move .icon > span:nth-child(1) {
+  animation: pumpRight 0.5s ease forwards;
+}
+
+.move .icon > span:nth-child(3) {
+  animation: pumpLeft 0.5s ease forwards;
+}
